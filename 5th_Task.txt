@@ -1,0 +1,121 @@
+Do the below programs in anonymous function & IIFE
+
+Print odd numbers in an array
+
+let arr = [1,2,3,4,5,6,7,8,9,10]
+console.log(arr.filter((i) => {
+    return i%2!==0
+}))
+
+Convert all the strings to title caps in a string array
+
+let str = ["apple", "ball", "cat", "dog", "elephant"]
+str = str.map((i) => {
+    return i.toUpperCase()
+})
+console.log(str)
+
+Sum of all numbers in an array
+
+let arr=[1, 2, 3, 4, 5,]
+let sum=arr.reduce((tot, i) => {
+    return tot + i
+
+}, 0)
+
+console.log(sum)
+
+Return all the prime numbers in an array
+
+let arr=[1, 2, 3, 4, 5,]
+console.log( arr.filter((i) => {
+        for (let p = 2; p < i; p++) {
+            if (i % p === 0)
+                return false;
+        }
+        return i !== 1;
+    }))
+
+
+Return all the palindromes in an array
+
+let arr = [111, 102, 505, 323, 612, 776, 707, 121]
+
+console.log(arr.filter((i) => {
+
+        let temp = i + "";
+
+        if (temp.split('').reverse().join('') === i + "")
+            return true
+
+        return false
+
+    }))
+
+Print odd numbers in an array
+
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let ans = (function (arr) {
+    return (arr.filter((i) => {
+        return i % 2 !== 0
+    }))
+})(arr);
+
+console.log(ans);
+
+Convert all the strings to title caps in a string array
+
+let str = ["apple", 'ball', 'cat', 'dog', 'elephant']
+let res = (function (stringArray) {
+    return (str.map((i) => {
+        return i.toUpperCase()
+    }))
+})(str);
+console.log(res)
+
+Sum of all numbers in an array
+
+let arr = [1,2,3,4,5] 
+let res = (function (arr) {
+    return (arr.reduce((tot, i) => {
+        return tot + i
+    }, 0))
+})(arr);
+
+console.log(res)
+
+Return all the prime numbers in an array
+
+let arr = [1,2,3,4,5]
+let res = (function (arr) {
+
+    return (arr.filter((i) => {
+
+        for (p = 2; p < i; i++) {
+            if (i % p === 0)
+                return false
+        }
+        return true
+    }))
+})(arr);
+console.log(res)
+
+Return all the palindromes in an array
+
+let arr = [111, 102, 505, 323, 612, 776, 707, 121]
+let res = (function (arr) {
+
+    return (arr.filter((item) => {
+
+        let temp = item + ""
+
+        if ((temp.split('').reverse().join('')) === item + "")
+            return true
+
+        return false
+
+    }))
+})(arr);
+
+console.log(res)
+
